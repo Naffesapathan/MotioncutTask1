@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pricing Page</title>
+</head>
+
+<body>
+
+    <!-- Header section - Product Name -->
+    <header>
+        <h1>Asthetic Price Showcase</h1>
+    </header>
+
+    <!-- Pricing Cards Section -->
+    <section class="pricing-container">
+
+        <!-- Basic Pricing Card -->
+        <div class="pricing-card" id="basic-card">
+            <h2>Basic</h2>
+            <span class="badge">Most Popular</span>
+            <p class="price">$19.99/month</p>
+            <ul style = "color: green">
+                <li>10 GB of Storage Space</li>
+                <li>Access to Basic Analytics2</li>
+                <li>Email Support</li>
+            </ul>
+            <button onclick="selectPlan('basic-card')">Select</button>
+        </div>
+
+        <!-- Standard Pricing Card -->
+        <div class="pricing-card" id="standard-card">
+            <h2>Standard</h2>
+            <p class="price">$29.99/month</p>
+            <ul style = "color: green">
+                <li>25 GB of Storage Space</li>
+                <li>Advanced Analytics Dashboard</li>
+                <li>24/7 Customer Support</li>
+            </ul>
+            <button onclick="selectPlan('standard-card')">Select</button>
+        </div>
+
+        <!-- Premium Pricing Card -->
+        <div class="pricing-card" id="premium-card">
+            <h2>Premium</h2>
+            <p class="price">$39.99/month</p>
+            <ul style = "color: green">
+                <li>Unlimited Storage Space</li>
+                <li>Premium Analytics Suite</li>
+                <li>Priority Email and Phone Support</li>
+            </ul>
+            <button onclick="selectPlan('premium-card')">Select</button>
+        </div>
+
+    </section>
+
+    <!-- Footer Section - Custom Plans and Enterprise Solutions -->
+    <footer>
+        <p>Contact us for custom plans and enterprise solutions</p>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Function to handle plan selection
+        function selectPlan(cardId) {
+            // Remove the 'selected' class from all cards
+            document.querySelectorAll('.pricing-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+
+            // Add the 'selected' class to the clicked card
+            document.getElementById(cardId).classList.add('selected');
+        }
+    </script>
+
+</body>
+
+</html>
